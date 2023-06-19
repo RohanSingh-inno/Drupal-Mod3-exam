@@ -1,0 +1,18 @@
+uuid: 00d3706a-408a-46ac-8c65-f3207c6a85fc
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.field_electronic_price
+field_name: field_electronic_price
+entity_type: node
+type: float
+settings: {  }
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

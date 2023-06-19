@@ -1,0 +1,23 @@
+uuid: a1395fcf-cbdc-4c22-98ca-18631bbfad0f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_grocery_price
+    - node.type.grocery
+id: node.grocery.field_grocery_price
+field_name: field_grocery_price
+entity_type: node
+bundle: grocery
+label: 'Grocery Price'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: 'Rs '
+  suffix: ''
+field_type: float

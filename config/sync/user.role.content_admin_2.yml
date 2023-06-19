@@ -1,0 +1,32 @@
+uuid: 02cae6d6-7716-4fc8-b8ec-2147e283b1c1
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.fashion
+    - node.type.home_furniture
+    - node.type.mobile
+  module:
+    - contextual
+    - file
+    - node
+    - system
+    - toolbar
+    - tour
+id: content_admin_2
+label: 'Content admin 2'
+weight: 5
+is_admin: null
+permissions:
+  - 'access administration pages'
+  - 'access content overview'
+  - 'access contextual links'
+  - 'access files overview'
+  - 'access toolbar'
+  - 'access tour'
+  - 'create fashion content'
+  - 'create home_furniture content'
+  - 'create mobile content'
+  - 'edit own fashion content'
+  - 'edit own home_furniture content'
+  - 'edit own mobile content'

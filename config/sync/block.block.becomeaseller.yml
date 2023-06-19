@@ -1,0 +1,25 @@
+uuid: 710d2e77-00d2-4512-9cf6-bd78c85733c7
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:ca2f1bfb-469f-4423-a3f8-3f32014bff51'
+  module:
+    - block_content
+  theme:
+    - bootstrap
+id: becomeaseller
+theme: bootstrap
+region: navigation
+weight: -4
+provider: null
+plugin: 'block_content:ca2f1bfb-469f-4423-a3f8-3f32014bff51'
+settings:
+  id: 'block_content:ca2f1bfb-469f-4423-a3f8-3f32014bff51'
+  label: 'Become a Seller'
+  label_display: '0'
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

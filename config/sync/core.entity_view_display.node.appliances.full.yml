@@ -1,0 +1,123 @@
+uuid: 3c1a214e-257e-4bad-a83f-89df827361de
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.full
+    - field.field.node.appliances.field_appliances_image
+    - field.field.node.appliances.field_description
+    - field.field.node.appliances.field_price
+    - node.type.appliances
+  module:
+    - image
+    - layout_builder
+    - user
+third_party_settings:
+  layout_builder:
+    enabled: true
+    allow_custom: false
+    sections:
+      -
+        layout_id: layout_twocol_section
+        layout_settings:
+          label: ''
+          context_mapping: {  }
+          column_widths: 33-67
+        components:
+          9d308096-5500-460f-b905-4c1911c6ad29:
+            uuid: 9d308096-5500-460f-b905-4c1911c6ad29
+            region: first
+            configuration:
+              id: 'field_block:node:appliances:field_appliances_image'
+              label: Image
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: image
+                label: hidden
+                settings:
+                  image_link: ''
+                  image_style: ''
+                  image_loading:
+                    attribute: lazy
+                third_party_settings: {  }
+            weight: 0
+            additional: {  }
+          550cfaf7-9580-423e-88ce-8d2f0cb8f538:
+            uuid: 550cfaf7-9580-423e-88ce-8d2f0cb8f538
+            region: second
+            configuration:
+              id: 'field_block:node:appliances:field_description'
+              label: Description
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: text_default
+                label: hidden
+                settings: {  }
+                third_party_settings: {  }
+            weight: 0
+            additional: {  }
+          89fb2564-9fd3-45e4-ac55-d3f33eb71aa8:
+            uuid: 89fb2564-9fd3-45e4-ac55-d3f33eb71aa8
+            region: second
+            configuration:
+              id: 'field_block:node:appliances:field_price'
+              label: Price
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: number_decimal
+                label: inline
+                settings:
+                  thousand_separator: ''
+                  decimal_separator: .
+                  scale: 2
+                  prefix_suffix: true
+                third_party_settings: {  }
+            weight: 1
+            additional: {  }
+        third_party_settings: {  }
+id: node.appliances.full
+targetEntityType: node
+bundle: appliances
+mode: full
+content:
+  field_appliances_image:
+    type: image
+    label: above
+    settings:
+      image_link: ''
+      image_style: ''
+      image_loading:
+        attribute: lazy
+    third_party_settings: {  }
+    weight: 102
+    region: content
+  field_price:
+    type: number_decimal
+    label: above
+    settings:
+      thousand_separator: ''
+      decimal_separator: .
+      scale: 2
+      prefix_suffix: true
+    third_party_settings: {  }
+    weight: 104
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  field_description: true

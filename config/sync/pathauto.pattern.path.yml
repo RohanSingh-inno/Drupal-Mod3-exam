@@ -1,0 +1,28 @@
+uuid: 01fd0100-2cfc-4db2-87b7-641a41d89c11
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: path
+label: Path
+type: 'canonical_entities:node'
+pattern: '[node:title]'
+selection_criteria:
+  203e8011-2d9d-4c40-86a6-25a403658a61:
+    id: 'entity_bundle:node'
+    negate: false
+    uuid: 203e8011-2d9d-4c40-86a6-25a403658a61
+    context_mapping:
+      node: node
+    bundles:
+      2_wheelers: 2_wheelers
+      appliances: appliances
+      electronics: electronics
+      fashion: fashion
+      grocery: grocery
+      home_furniture: home_furniture
+      mobile: mobile
+selection_logic: and
+weight: -5
+relationships: {  }

@@ -1,0 +1,23 @@
+uuid: bca07aa8-5aa2-4d51-ab2d-3b57510f7a8a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_electronic_price
+    - node.type.electronics
+id: node.electronics.field_electronic_price
+field_name: field_electronic_price
+entity_type: node
+bundle: electronics
+label: 'Electronic Price'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: 'Rs '
+  suffix: ''
+field_type: float

@@ -1,0 +1,23 @@
+uuid: bd1da189-2fc8-4aa8-a932-7606b4b22ef2
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_price
+    - node.type.appliances
+id: node.appliances.field_price
+field_name: field_price
+entity_type: node
+bundle: appliances
+label: Price
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: 'Rs '
+  suffix: ''
+field_type: float

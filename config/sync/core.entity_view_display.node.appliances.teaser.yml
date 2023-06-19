@@ -1,0 +1,84 @@
+uuid: 96756f8b-7a22-4535-813b-29a4466e8b2d
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.appliances.field_appliances_image
+    - field.field.node.appliances.field_description
+    - field.field.node.appliances.field_price
+    - node.type.appliances
+  module:
+    - layout_builder
+    - user
+third_party_settings:
+  layout_builder:
+    enabled: true
+    allow_custom: false
+    sections:
+      -
+        layout_id: layout_twocol_section
+        layout_settings:
+          label: ''
+          context_mapping: {  }
+          column_widths: 25-75
+        components:
+          3c748f45-b600-42bd-8126-11575f199da1:
+            uuid: 3c748f45-b600-42bd-8126-11575f199da1
+            region: first
+            configuration:
+              id: 'field_block:node:appliances:field_appliances_image'
+              label: Image
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: image
+                label: hidden
+                settings:
+                  image_link: ''
+                  image_style: thumbnail
+                  image_loading:
+                    attribute: lazy
+                third_party_settings: {  }
+            weight: 0
+            additional: {  }
+          602cf505-3e38-4439-91d0-3a23f79bc9f8:
+            uuid: 602cf505-3e38-4439-91d0-3a23f79bc9f8
+            region: second
+            configuration:
+              id: 'field_block:node:appliances:field_price'
+              label: Price
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: number_decimal
+                label: inline
+                settings:
+                  thousand_separator: ''
+                  decimal_separator: .
+                  scale: 2
+                  prefix_suffix: true
+                third_party_settings: {  }
+            weight: 1
+            additional: {  }
+        third_party_settings: {  }
+id: node.appliances.teaser
+targetEntityType: node
+bundle: appliances
+mode: teaser
+content:
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  field_appliances_image: true
+  field_description: true
+  field_price: true

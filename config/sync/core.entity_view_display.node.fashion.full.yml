@@ -1,0 +1,123 @@
+uuid: 1045ae78-549d-44d8-a88e-9945435f8ca0
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.full
+    - field.field.node.fashion.field_fashion
+    - field.field.node.fashion.field_fashion_image
+    - field.field.node.fashion.field_fashion_price
+    - node.type.fashion
+  module:
+    - image
+    - layout_builder
+    - user
+third_party_settings:
+  layout_builder:
+    enabled: true
+    allow_custom: false
+    sections:
+      -
+        layout_id: layout_twocol_section
+        layout_settings:
+          label: ''
+          context_mapping: {  }
+          column_widths: 33-67
+        components:
+          dfa77d20-9637-4e5b-b3b8-9f75cb523eb7:
+            uuid: dfa77d20-9637-4e5b-b3b8-9f75cb523eb7
+            region: first
+            configuration:
+              id: 'field_block:node:fashion:field_fashion_image'
+              label: 'Fashion Image'
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: image
+                label: hidden
+                settings:
+                  image_link: ''
+                  image_style: ''
+                  image_loading:
+                    attribute: lazy
+                third_party_settings: {  }
+            weight: 0
+            additional: {  }
+          256d303d-9100-45fe-910a-feea3a272547:
+            uuid: 256d303d-9100-45fe-910a-feea3a272547
+            region: second
+            configuration:
+              id: 'field_block:node:fashion:field_fashion'
+              label: 'Fashion Description'
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: text_default
+                label: above
+                settings: {  }
+                third_party_settings: {  }
+            weight: -1
+            additional: {  }
+          c67d6b8e-6106-4fb0-bbe4-c404613839e8:
+            uuid: c67d6b8e-6106-4fb0-bbe4-c404613839e8
+            region: second
+            configuration:
+              id: 'field_block:node:fashion:field_fashion_price'
+              label: 'Fashion Price'
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: number_decimal
+                label: inline
+                settings:
+                  thousand_separator: ''
+                  decimal_separator: .
+                  scale: 2
+                  prefix_suffix: true
+                third_party_settings: {  }
+            weight: 0
+            additional: {  }
+        third_party_settings: {  }
+id: node.fashion.full
+targetEntityType: node
+bundle: fashion
+mode: full
+content:
+  field_fashion_image:
+    type: image
+    label: above
+    settings:
+      image_link: ''
+      image_style: ''
+      image_loading:
+        attribute: lazy
+    third_party_settings: {  }
+    weight: 101
+    region: content
+  field_fashion_price:
+    type: number_decimal
+    label: above
+    settings:
+      thousand_separator: ''
+      decimal_separator: .
+      scale: 2
+      prefix_suffix: true
+    third_party_settings: {  }
+    weight: 103
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  field_fashion: true

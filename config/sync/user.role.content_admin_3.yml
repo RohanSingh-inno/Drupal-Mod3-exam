@@ -1,0 +1,26 @@
+uuid: e385ee1a-f52c-4bb5-a641-bd675fe4cb21
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.2_wheelers
+  module:
+    - contextual
+    - file
+    - node
+    - system
+    - toolbar
+    - tour
+id: content_admin_3
+label: 'Content admin 3'
+weight: 6
+is_admin: null
+permissions:
+  - 'access administration pages'
+  - 'access content overview'
+  - 'access contextual links'
+  - 'access files overview'
+  - 'access toolbar'
+  - 'access tour'
+  - 'create 2_wheelers content'
+  - 'edit own 2_wheelers content'
