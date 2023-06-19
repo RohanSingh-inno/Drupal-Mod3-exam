@@ -1,0 +1,23 @@
+uuid: 2b948532-ecfd-4c6f-b2b7-f40d0893f635
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_two_wheelers_description
+    - node.type.2_wheelers
+  module:
+    - text
+id: node.2_wheelers.field_two_wheelers_description
+field_name: field_two_wheelers_description
+entity_type: node
+bundle: 2_wheelers
+label: 'Two Wheelers Description'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: false
+  required_summary: false
+field_type: text_with_summary

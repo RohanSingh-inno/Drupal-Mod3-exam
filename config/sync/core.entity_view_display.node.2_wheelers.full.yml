@@ -1,0 +1,123 @@
+uuid: 51d4d65a-6f01-4de1-968c-95cb6589512b
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.full
+    - field.field.node.2_wheelers.field_two_wheelers_description
+    - field.field.node.2_wheelers.field_two_wheelers_image
+    - field.field.node.2_wheelers.field_two_wheelers_price
+    - node.type.2_wheelers
+  module:
+    - image
+    - layout_builder
+    - user
+third_party_settings:
+  layout_builder:
+    enabled: true
+    allow_custom: false
+    sections:
+      -
+        layout_id: layout_twocol_section
+        layout_settings:
+          label: ''
+          context_mapping: {  }
+          column_widths: 33-67
+        components:
+          dd76c21f-67e2-4dfe-97f5-d9b435f88d1d:
+            uuid: dd76c21f-67e2-4dfe-97f5-d9b435f88d1d
+            region: first
+            configuration:
+              id: 'field_block:node:2_wheelers:field_two_wheelers_image'
+              label: 'Two Wheelers Image'
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: image
+                label: hidden
+                settings:
+                  image_link: ''
+                  image_style: ''
+                  image_loading:
+                    attribute: lazy
+                third_party_settings: {  }
+            weight: 0
+            additional: {  }
+          6dbb5367-a9b3-4c33-8d3a-5dfd646012b8:
+            uuid: 6dbb5367-a9b3-4c33-8d3a-5dfd646012b8
+            region: second
+            configuration:
+              id: 'field_block:node:2_wheelers:field_two_wheelers_description'
+              label: 'Two Wheelers Description'
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: text_default
+                label: hidden
+                settings: {  }
+                third_party_settings: {  }
+            weight: -1
+            additional: {  }
+          bbef8e56-e1cc-401b-8835-9b7747fbf004:
+            uuid: bbef8e56-e1cc-401b-8835-9b7747fbf004
+            region: second
+            configuration:
+              id: 'field_block:node:2_wheelers:field_two_wheelers_price'
+              label: 'Two Wheelers Price'
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: number_decimal
+                label: inline
+                settings:
+                  thousand_separator: ''
+                  decimal_separator: .
+                  scale: 2
+                  prefix_suffix: true
+                third_party_settings: {  }
+            weight: 0
+            additional: {  }
+        third_party_settings: {  }
+id: node.2_wheelers.full
+targetEntityType: node
+bundle: 2_wheelers
+mode: full
+content:
+  field_two_wheelers_image:
+    type: image
+    label: above
+    settings:
+      image_link: ''
+      image_style: ''
+      image_loading:
+        attribute: lazy
+    third_party_settings: {  }
+    weight: 101
+    region: content
+  field_two_wheelers_price:
+    type: number_decimal
+    label: above
+    settings:
+      thousand_separator: ''
+      decimal_separator: .
+      scale: 2
+      prefix_suffix: true
+    third_party_settings: {  }
+    weight: 103
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  field_two_wheelers_description: true

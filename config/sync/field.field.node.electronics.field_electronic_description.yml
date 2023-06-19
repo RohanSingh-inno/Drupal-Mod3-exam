@@ -1,0 +1,23 @@
+uuid: c791eed4-ae9c-4506-afb2-11f3f92e6cda
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_electronic_description
+    - node.type.electronics
+  module:
+    - text
+id: node.electronics.field_electronic_description
+field_name: field_electronic_description
+entity_type: node
+bundle: electronics
+label: 'Electronic Description'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: false
+  required_summary: false
+field_type: text_with_summary

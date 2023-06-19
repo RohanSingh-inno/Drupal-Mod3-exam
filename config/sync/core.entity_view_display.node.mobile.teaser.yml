@@ -1,0 +1,26 @@
+uuid: 5f186f56-5532-45fb-8475-89bf37ffa011
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.mobile.field_mobile_description
+    - field.field.node.mobile.field_mobile_image
+    - field.field.node.mobile.field_mobile_price
+    - node.type.mobile
+  module:
+    - user
+id: node.mobile.teaser
+targetEntityType: node
+bundle: mobile
+mode: teaser
+content:
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  field_mobile_description: true
+  field_mobile_image: true
+  field_mobile_price: true

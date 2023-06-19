@@ -1,0 +1,123 @@
+uuid: 88b0957b-7854-43bb-987f-5c164426251a
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.full
+    - field.field.node.home_furniture.field_home_description
+    - field.field.node.home_furniture.field_home_image
+    - field.field.node.home_furniture.field_home_price
+    - node.type.home_furniture
+  module:
+    - image
+    - layout_builder
+    - user
+third_party_settings:
+  layout_builder:
+    enabled: true
+    allow_custom: false
+    sections:
+      -
+        layout_id: layout_twocol_section
+        layout_settings:
+          label: ''
+          context_mapping: {  }
+          column_widths: 33-67
+        components:
+          0022d599-2c72-465f-baf7-9228dc45c56f:
+            uuid: 0022d599-2c72-465f-baf7-9228dc45c56f
+            region: first
+            configuration:
+              id: 'field_block:node:home_furniture:field_home_image'
+              label: 'Home Image'
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: image
+                label: hidden
+                settings:
+                  image_link: ''
+                  image_style: ''
+                  image_loading:
+                    attribute: lazy
+                third_party_settings: {  }
+            weight: 0
+            additional: {  }
+          970afd4f-807b-470b-9bda-8ce813e897a7:
+            uuid: 970afd4f-807b-470b-9bda-8ce813e897a7
+            region: second
+            configuration:
+              id: 'field_block:node:home_furniture:field_home_price'
+              label: 'Home Price'
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: number_decimal
+                label: inline
+                settings:
+                  thousand_separator: ''
+                  decimal_separator: .
+                  scale: 2
+                  prefix_suffix: true
+                third_party_settings: {  }
+            weight: 0
+            additional: {  }
+          d22a6061-80a4-4c16-88c4-ffe2e79deb19:
+            uuid: d22a6061-80a4-4c16-88c4-ffe2e79deb19
+            region: second
+            configuration:
+              id: 'field_block:node:home_furniture:field_home_description'
+              label: 'Home Description'
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: text_default
+                label: hidden
+                settings: {  }
+                third_party_settings: {  }
+            weight: -1
+            additional: {  }
+        third_party_settings: {  }
+id: node.home_furniture.full
+targetEntityType: node
+bundle: home_furniture
+mode: full
+content:
+  field_home_image:
+    type: image
+    label: above
+    settings:
+      image_link: ''
+      image_style: ''
+      image_loading:
+        attribute: lazy
+    third_party_settings: {  }
+    weight: 101
+    region: content
+  field_home_price:
+    type: number_decimal
+    label: above
+    settings:
+      thousand_separator: ''
+      decimal_separator: .
+      scale: 2
+      prefix_suffix: true
+    third_party_settings: {  }
+    weight: 103
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  field_home_description: true

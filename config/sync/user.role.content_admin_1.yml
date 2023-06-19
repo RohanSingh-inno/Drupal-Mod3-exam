@@ -1,0 +1,32 @@
+uuid: 552aa3d8-8fe5-4420-ac89-73a70bbc4eaa
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.appliances
+    - node.type.electronics
+    - node.type.grocery
+  module:
+    - contextual
+    - file
+    - node
+    - system
+    - toolbar
+    - tour
+id: content_admin_1
+label: 'Content admin 1'
+weight: 4
+is_admin: null
+permissions:
+  - 'access administration pages'
+  - 'access content overview'
+  - 'access contextual links'
+  - 'access files overview'
+  - 'access toolbar'
+  - 'access tour'
+  - 'create appliances content'
+  - 'create electronics content'
+  - 'create grocery content'
+  - 'edit own appliances content'
+  - 'edit own electronics content'
+  - 'edit own grocery content'

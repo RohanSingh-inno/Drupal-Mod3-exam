@@ -1,0 +1,123 @@
+uuid: 0565f3f4-47df-406d-a70a-5c129eaa312d
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.full
+    - field.field.node.mobile.field_mobile_description
+    - field.field.node.mobile.field_mobile_image
+    - field.field.node.mobile.field_mobile_price
+    - node.type.mobile
+  module:
+    - image
+    - layout_builder
+    - user
+third_party_settings:
+  layout_builder:
+    enabled: true
+    allow_custom: false
+    sections:
+      -
+        layout_id: layout_twocol_section
+        layout_settings:
+          label: ''
+          context_mapping: {  }
+          column_widths: 33-67
+        components:
+          c7108755-7469-4c7b-91a1-24f315e28134:
+            uuid: c7108755-7469-4c7b-91a1-24f315e28134
+            region: first
+            configuration:
+              id: 'field_block:node:mobile:field_mobile_image'
+              label: 'Mobile Image'
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: image
+                label: hidden
+                settings:
+                  image_link: ''
+                  image_style: ''
+                  image_loading:
+                    attribute: lazy
+                third_party_settings: {  }
+            weight: 0
+            additional: {  }
+          f3d86e8b-aceb-488f-82de-ef8b60b819aa:
+            uuid: f3d86e8b-aceb-488f-82de-ef8b60b819aa
+            region: second
+            configuration:
+              id: 'field_block:node:mobile:field_mobile_description'
+              label: 'Mobile Description'
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: text_default
+                label: hidden
+                settings: {  }
+                third_party_settings: {  }
+            weight: -1
+            additional: {  }
+          0df15a65-3ef3-4d34-86fb-837fa0d980c8:
+            uuid: 0df15a65-3ef3-4d34-86fb-837fa0d980c8
+            region: second
+            configuration:
+              id: 'field_block:node:mobile:field_mobile_price'
+              label: 'Mobile Price'
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: number_decimal
+                label: inline
+                settings:
+                  thousand_separator: ''
+                  decimal_separator: .
+                  scale: 2
+                  prefix_suffix: true
+                third_party_settings: {  }
+            weight: 0
+            additional: {  }
+        third_party_settings: {  }
+id: node.mobile.full
+targetEntityType: node
+bundle: mobile
+mode: full
+content:
+  field_mobile_image:
+    type: image
+    label: above
+    settings:
+      image_link: ''
+      image_style: ''
+      image_loading:
+        attribute: lazy
+    third_party_settings: {  }
+    weight: 101
+    region: content
+  field_mobile_price:
+    type: number_decimal
+    label: above
+    settings:
+      thousand_separator: ''
+      decimal_separator: .
+      scale: 2
+      prefix_suffix: true
+    third_party_settings: {  }
+    weight: 103
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  field_mobile_description: true

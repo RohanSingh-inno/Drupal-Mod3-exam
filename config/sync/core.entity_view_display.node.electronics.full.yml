@@ -1,0 +1,123 @@
+uuid: 7fefdc44-fe6d-42ef-825e-808cdc3162d0
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.full
+    - field.field.node.electronics.field_electronic_description
+    - field.field.node.electronics.field_electronic_image
+    - field.field.node.electronics.field_electronic_price
+    - node.type.electronics
+  module:
+    - image
+    - layout_builder
+    - user
+third_party_settings:
+  layout_builder:
+    enabled: true
+    allow_custom: false
+    sections:
+      -
+        layout_id: layout_twocol_section
+        layout_settings:
+          label: ''
+          context_mapping: {  }
+          column_widths: 33-67
+        components:
+          88068dde-430f-45ff-bfa2-f3b83c806d0f:
+            uuid: 88068dde-430f-45ff-bfa2-f3b83c806d0f
+            region: first
+            configuration:
+              id: 'field_block:node:electronics:field_electronic_image'
+              label: 'Electronic Image'
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: image
+                label: hidden
+                settings:
+                  image_link: ''
+                  image_style: ''
+                  image_loading:
+                    attribute: lazy
+                third_party_settings: {  }
+            weight: 0
+            additional: {  }
+          47962afd-8401-4cd0-81c2-229f659460b9:
+            uuid: 47962afd-8401-4cd0-81c2-229f659460b9
+            region: second
+            configuration:
+              id: 'field_block:node:electronics:field_electronic_description'
+              label: 'Electronic Description'
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: text_default
+                label: hidden
+                settings: {  }
+                third_party_settings: {  }
+            weight: -1
+            additional: {  }
+          502683a8-a35a-4f71-8af5-598f42a70216:
+            uuid: 502683a8-a35a-4f71-8af5-598f42a70216
+            region: second
+            configuration:
+              id: 'field_block:node:electronics:field_electronic_price'
+              label: 'Electronic Price'
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: number_decimal
+                label: inline
+                settings:
+                  thousand_separator: ''
+                  decimal_separator: .
+                  scale: 2
+                  prefix_suffix: true
+                third_party_settings: {  }
+            weight: 0
+            additional: {  }
+        third_party_settings: {  }
+id: node.electronics.full
+targetEntityType: node
+bundle: electronics
+mode: full
+content:
+  field_electronic_image:
+    type: image
+    label: above
+    settings:
+      image_link: ''
+      image_style: ''
+      image_loading:
+        attribute: lazy
+    third_party_settings: {  }
+    weight: 101
+    region: content
+  field_electronic_price:
+    type: number_decimal
+    label: above
+    settings:
+      thousand_separator: ''
+      decimal_separator: .
+      scale: 2
+      prefix_suffix: true
+    third_party_settings: {  }
+    weight: 103
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  field_electronic_description: true

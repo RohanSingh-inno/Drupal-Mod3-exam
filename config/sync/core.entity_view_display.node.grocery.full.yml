@@ -1,0 +1,123 @@
+uuid: a4f3b082-a6d6-48f6-acca-11e580dd754d
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.full
+    - field.field.node.grocery.field_grocery_description
+    - field.field.node.grocery.field_grocery_image
+    - field.field.node.grocery.field_grocery_price
+    - node.type.grocery
+  module:
+    - image
+    - layout_builder
+    - user
+third_party_settings:
+  layout_builder:
+    enabled: true
+    allow_custom: false
+    sections:
+      -
+        layout_id: layout_twocol_section
+        layout_settings:
+          label: ''
+          context_mapping: {  }
+          column_widths: 33-67
+        components:
+          5314edfc-bae1-4ce7-8ccf-5b95ba0cc96a:
+            uuid: 5314edfc-bae1-4ce7-8ccf-5b95ba0cc96a
+            region: first
+            configuration:
+              id: 'field_block:node:grocery:field_grocery_image'
+              label: 'Grocery Image'
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: image
+                label: hidden
+                settings:
+                  image_link: ''
+                  image_style: ''
+                  image_loading:
+                    attribute: lazy
+                third_party_settings: {  }
+            weight: 0
+            additional: {  }
+          bf91fb90-e9e1-47e9-8db5-edfbfd3c9584:
+            uuid: bf91fb90-e9e1-47e9-8db5-edfbfd3c9584
+            region: second
+            configuration:
+              id: 'field_block:node:grocery:field_grocery_description'
+              label: 'Grocery Description'
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: text_default
+                label: hidden
+                settings: {  }
+                third_party_settings: {  }
+            weight: 0
+            additional: {  }
+          9ef47955-3e20-4b40-9cd6-820905a7417b:
+            uuid: 9ef47955-3e20-4b40-9cd6-820905a7417b
+            region: second
+            configuration:
+              id: 'field_block:node:grocery:field_grocery_price'
+              label: 'Grocery Price'
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: number_decimal
+                label: inline
+                settings:
+                  thousand_separator: ''
+                  decimal_separator: .
+                  scale: 2
+                  prefix_suffix: true
+                third_party_settings: {  }
+            weight: 1
+            additional: {  }
+        third_party_settings: {  }
+id: node.grocery.full
+targetEntityType: node
+bundle: grocery
+mode: full
+content:
+  field_grocery_image:
+    type: image
+    label: above
+    settings:
+      image_link: ''
+      image_style: ''
+      image_loading:
+        attribute: lazy
+    third_party_settings: {  }
+    weight: 101
+    region: content
+  field_grocery_price:
+    type: number_decimal
+    label: above
+    settings:
+      thousand_separator: ''
+      decimal_separator: .
+      scale: 2
+      prefix_suffix: true
+    third_party_settings: {  }
+    weight: 103
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  field_grocery_description: true

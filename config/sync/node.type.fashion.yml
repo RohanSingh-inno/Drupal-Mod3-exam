@@ -1,0 +1,18 @@
+uuid: cb274a1d-532d-43f3-a68e-0abf03fe5f01
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus:
+      - main
+    parent: 'main:'
+name: Fashion
+type: fashion
+description: 'All clothing for sale'
+help: ''
+new_revision: true
+preview_mode: 1
+display_submitted: false

@@ -1,0 +1,23 @@
+uuid: d035c1fe-6fc5-4e42-b874-2663510b59b4
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_description
+    - node.type.appliances
+  module:
+    - text
+id: node.appliances.field_description
+field_name: field_description
+entity_type: node
+bundle: appliances
+label: Description
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: false
+  required_summary: false
+field_type: text_with_summary
